@@ -41,4 +41,9 @@ public class RestuarentController {
 	public MenuItem updateManuItem(@RequestBody MenuItem menuItem) {
 		return menuRepository.save(menuItem);		
 	}
+	
+	@RequestMapping("/getAllMenuItemsByPrice/{price:.+}")
+	public List<MenuItem> getAllMenuItemsByPrice(@PathVariable(value = "price") Float price) {
+		return menuRepository.findMenusWithThePrice(price);	
+	}
 }
