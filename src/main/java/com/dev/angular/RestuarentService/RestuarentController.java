@@ -21,7 +21,7 @@ public class RestuarentController {
 	MenuRepository menuRepository;
 	
 	@RequestMapping("/getAllMenuItems")
-	public List<MenuItem> getAllMenuItems() {
+	public List<MenuItem> getAllMenuItemsTester() {
 		return menuRepository.findAll();		
 	}
 
